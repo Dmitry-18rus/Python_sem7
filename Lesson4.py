@@ -5,22 +5,22 @@
 # множества. m — кол-во элементов второго множества. Затем 
 # пользователь вводит сами элементы множеств.
 
-import random
-def create_list(n):
-    list_= []
-    for i in range(n):
-        list_.append(random.randint(1,9))
-    return list_
+# import random
+# def create_list(n):
+#     list_= []
+#     for i in range(n):
+#         list_.append(random.randint(1,9))
+#     return list_
 
-n = int (input('Введите кол-во элементов первого множества: '))
-m = int (input('Введите кол-во элементов второго множества: '))
-list_1 = create_list(n)
-list_2 = create_list(m)
-print(f'первое множество:{list_1}')
-print(f'второе множество:{list_2}')
-list_3 = list_1 + list_2
-print (list_3)
-print(f'уникальное множество:{sorted(set(list_3))}')
+# n = int (input('Введите кол-во элементов первого множества: '))
+# m = int (input('Введите кол-во элементов второго множества: '))
+# list_1 = create_list(n)
+# list_2 = create_list(m)
+# print(f'первое множество:{list_1}')
+# print(f'второе множество:{list_2}')
+# list_3 = list_1 + list_2
+# print (list_3)
+# print(f'уникальное множество:{sorted(set(list_3))}')
 
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
@@ -57,6 +57,7 @@ print(f'уникальное множество:{sorted(set(list_3))}')
 #         rez_arr.append(arr[j]+arr[j-1]+arr[0])
 # print(f'Возможные количества сбора ягод: {rez_arr}')
 # print(f'Максимальное число ягод, которое можно собрать за один заход: {max(rez_arr)}')
+
 
 
 
