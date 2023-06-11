@@ -19,7 +19,7 @@
 
 file_path = 'tel_sprav.txt'
 def vvod():
-    vizov = int (input('Введите команду: \n1 - Вывод всех данных \n2 - Добавление контакта \n3 - Поиск контакта\n:'))
+    vizov = int (input('Введите команду: \n1 - Вывод всех данных \n2 - Добавление контакта \n3 - Поиск контакта \n4 - Удаление контакта\n:'))
     return vizov
 
 def vivod_dannih(file_path):
@@ -39,13 +39,13 @@ def add_contact(file_path):
         patronymic = input('Отчество: ') 
         phone = input('Номер телефона: ')
         print(f'Контакт успешно добавлен --> {surname} {name} {patronymic} {phone}')
-        f.write ('\n' + f'{surname} {name} {patronymic} {phone}')
+        f.write ('\n' + f'{surname},{name},{patronymic},{phone}')
     return True
     
            
 def search_cont(file_path):
     with open(file_path, 'r', encoding='UTF-8') as f:
-        poisk = input('Введите имя или фамилию контакта: ')
+        poisk = input('Введите данные контакта: ')
         for line in f:
             if poisk in line:
                 mass = line.strip().split(',')
@@ -55,6 +55,20 @@ def search_cont(file_path):
         f.read()    
     return True
 
+def del_data (file_path):
+    with open(file_path, 'r', encoding='UTF-8') as fi:
+        lines = fi.readlines()
+        fi.close()
+    with open(file_path, 'w', encoding='UTF-8') as f:
+        poisk = input('Введите данные контакта для удаления: ')
+        for line in lines:
+            if poisk not in line:
+                f.write(line)
+        f.close()
+    print("Контакт успешно удален")    
+    return True
+
+
 input_ = vvod()
 
 if input_ ==1:
@@ -63,6 +77,9 @@ elif input_ ==2:
     add_contact(file_path)
 elif input_ ==3:
     search_cont(file_path)
+elif input_ ==4:
+    del_data(file_path)
 else:
     print("Выбран недопустимый параметр! Попробуйте снова! ")
         
+
