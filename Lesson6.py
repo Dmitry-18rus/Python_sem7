@@ -16,25 +16,24 @@
 # d = int (input("введите число d: "))
 # print (arr_input(a,n,d))
 
-
 # Задача 32: Определить индексы элементов массива (списка), 
 # значения которых принадлежат заданному диапазону (т.е. не 
 # меньше заданного минимума и не больше заданного максимума)
 
-import random
-def create_list(i):
-    list_= []
-    for j in range(i):
-        list_.append(random.randint(1,9))
-    return list_
+# import random
+# def create_list(i):
+#     list_= []
+#     for j in range(i):
+#         list_.append(random.randint(1,9))
+#     return list_
 
-i = int (input("введите длину массива: "))
-min_ = int (input("введите минимум диапазона: "))
-max_ = int (input("введите максимум диапазона: "))
-arr = create_list(i)
-res_arr = []
-for item in range(i):
-    if min_ < arr[item] < max_:
-        res_arr.append(item)
-print(arr)
-print (res_arr)
+# i = int (input("введите длину массива: "))
+# min_ = int (input("введите минимум диапазона: "))
+# max_ = int (input("введите максимум диапазона: "))
+# arr = create_list(i)
+# res_arr = []
+# for item in range(i):
+#     if min_ < arr[item] < max_:
+#         res_arr.append(item)
+# print(arr)
+# print (res_arr)
